@@ -86,18 +86,21 @@ To understand in better way we will compare with Docker and learn the architectu
 
 | Docker | Kubernetes |  
 |:-----  |:------:    |
-| Container run time component: Docker has Docker shim which is needed for running container   |   Kublet which is responsible for running the pod in K8s also K8 supports other components like Docker shim, containerd, crio-o     | 
-|     |       | 
- 
+| **Container run time component**: Docker has Docker shim which is needed for running container   |   **Kublet** which is responsible for maintaining the pod running in K8s(inform if there is any problem when pod is not running it basically make sures od is running all the tie if not informs other component).**Container run time** in K8s actually runs the pod, also K8 supports other components like Docker shim, containerd, crio-o  | 
+| **Networking** : Docker-0 bridge networking is mandatory for running pod   | **Kube-proxy**- responsible for networking like allocating ip address and default load balancing capabilities for k8s | 
 
 
+Master Node components:
 
+| Components | Description |  
+|:-----  |:------:    |
+| **API server/control plane**    |  Core component of K8s, it takes requests from external world    |  
+|**Scheduler**| responsible for scheduling resources in K8s, recieves info from API server based on that it will create pod on respective nodes     | 
+| **etcd**    | backup service- creates Key value pair, helps in restoring cluster call'd as Key value store     | 
+|**controller manager**    | controllers for auto scalling- replica set in K8s is a type of controller in K8s file if it is mentioned as 2 pods it will make sure 2 pods are always running and controller manager takes care controllers, will check if they are running or not      | 
+|**Cloud controller manager-CCM**    | If K8s has to create any storage or resource on any cloud service, it has to translate the request and sends to API which the cloud provider understands, this mechanism has to be implemneted on CCM     | 
 
-
-
-
-
-
+**so basically master node components, controls the actions- and worker node components does the actions.**
 
 
 
