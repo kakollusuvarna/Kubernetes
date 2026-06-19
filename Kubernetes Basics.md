@@ -15,6 +15,13 @@ In real world it advanced from (Physical servers --> VM--> Containers)
 But it can be like we are not using complete resources- for example if an organization bought 1000 GB phyiscal server and installed Hypervisor and it is 
 divided into different VM but the organization will not use complete resources.
 
-So we should now understand, why we moved to containers--
+So we should now understand, why we moved to containers-- same thing as above we are nt using full capacity of the resources as some apps need only less resources even though they are running on full fledged, like it can only use 20 or 30 GB even though the VM has 100 GB space. so here we are wasting some resources.
+
+So containerization will solve some provlem of virtualization - not all as Virtualization is more secured when compared to containerization because they are strictly isolated where as container can talk to other containers and there will be some sort of leakage.
+
+Containerzation can be done in two ways
+1- it can be done on top of physical server.
+2- it can be done on top of VM
+
 
 Docker:  
