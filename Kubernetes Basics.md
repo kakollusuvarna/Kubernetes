@@ -3,8 +3,8 @@ Kubernetes Basics
 
 Before knowing Kubernetes we should understand about containers and Docker.
 
-Container:
-Introduction -
+**Container: Introduction**
+
 In real world it advanced from (Physical servers --> VM--> Containers)
  
   Hypervisor is a virtualization platform thats creates and manages(basically seperates and creates indvidually as per snippet below) applications and its OS- each application has its own OS and highly secure and it is Good.
@@ -32,7 +32,7 @@ Docker:
 Docker images are very light weight reasons:
 - No full OS for each container- uses OS from base image OS
 - It packages app and its depndencies and share the common Host
-- easy to ship
+- makes it easy to ship(deploy)
   
 **Life cycle of Docker container.**
 
@@ -77,12 +77,18 @@ CNCF organization is continuously working on evolving K8s for ex- Ingress contrl
 
 ## K8s architecture ##
 
+<img width="832" height="507" alt="Image" src="https://github.com/user-attachments/assets/bbc1d769-f02a-46e0-8081-d78ba69ff191" />
+
+
+To understand in better way we will compare with Docker and learn the architecture and its components. so it makes sense
 
 
 
-
-
-
+| Docker | Kubernetes |  
+|:-----  |:------:    |
+| Container run time component: Docker has Docker shim which is needed for running container   |   Kublet which is responsible for running the pod in K8s also K8 supports other components like Docker shim, containerd, crio-o     | 
+|     |       | 
+ 
 
 
 
