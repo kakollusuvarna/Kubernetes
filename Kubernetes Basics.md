@@ -84,7 +84,7 @@ To understand in better way we will compare with Docker and learn the architectu
 
 
 
-| Docker | Kubernetes |  
+| Docker | Kubernetes(worker node components) |  
 |:-----  |:------:    |
 | **Container run time component**: Docker has Docker shim which is needed for running container   |   **Kublet** which is responsible for maintaining the pod running in K8s(inform if there is any problem when pod is not running it basically make sures od is running all the tie if not informs other component).**Container run time** in K8s actually runs the pod, also K8 supports other components like Docker shim, containerd, crio-o  | 
 | **Networking** : Docker-0 bridge networking is mandatory for running pod   | **Kube-proxy**- responsible for networking like allocating ip address and default load balancing capabilities for k8s | 
