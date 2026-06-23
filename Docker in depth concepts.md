@@ -1,4 +1,24 @@
-**Multi stage Dockerfile**
+ # **Multi stage Dockerfile**
+
+ Multi-stage builds work in the below way:
+
+Stage 1 (Builder): Use a big environment with all tools to BUILD your app
+Stage 2 (Final): Copy ONLY the finished product into a small, clean image
+
+Without Multi-Stage:
+**Your App Code + Compiler + Build Tools + Dependencies = HUGE IMAGE (500MB - 1GB)**
+With Multi-Stage:
+**Stage 1: Big image builds your app
+Stage 2: Small image gets ONLY the final app = TINY IMAGE (10MB - 50MB)**
+
+**Benefits:
+Benefit	Explanation**
+🪶 Smaller Image Size	No build tools in final image
+🔒 Better Security	Less software = less attack surface
+🚀 Faster Deployment	Smaller images pull/push faster
+🧹 Cleaner Production	No compilers/debuggers in production
+
+
 
 # Docker Networking:
 
